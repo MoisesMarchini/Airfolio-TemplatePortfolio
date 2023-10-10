@@ -1,0 +1,31 @@
+.btn {
+  --_btn-color: var(--black);
+  --_btn-bg-color: var(--white);
+  padding: 8px 20px;
+  border-radius: 0px;
+  background-color: var(--_btn-bg-color);
+  color: var(--_btn-color);
+  border: 1px solid var(--_btn-bg-color);
+  cursor: pointer;
+  &.rounded {
+    border-radius: 8px;
+  }
+  &.btn-lg {
+    padding: 16px 24px;
+  }
+}
+
+@each $color-name, $color-value in $all-colors {
+  .btn-#{$color-name}{
+    --_btn-bg-color: var(--#{$color-name});
+  }
+  .btn-outline-#{$color-name}{
+    --_btn-color: var(--#{$color-name});
+    --_btn-bg-color: transparent;
+    border: 1px solid var(--#{$color-name});
+    &:hover, &.active {
+      --_btn-color: var(--white);
+      --_btn-bg-color: var(--#{$color-name});
+    }
+  }
+}

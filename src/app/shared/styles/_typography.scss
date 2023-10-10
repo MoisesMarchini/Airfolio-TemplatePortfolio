@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --base-font-size: 16px;
+  --font-size: 13;
+  font-size: calc(var(--font-size) * 1px);
+}
+
+@media (min-width: $md-breakpoint) {
+  :root {
+    --font-size: 16;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p,
+.h1, .h2, .h3, .h4, .h5, .h6, .p{
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: 3.5rem;
+  line-height: 120%;
+}
+
+h2, .h2 {
+  font-size: 3rem;
+  line-height: 120%;
+}
+
+h3, .h3 {
+  font-size: 2.5rem;
+  line-height: 120%;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+  line-height: 140%;
+}
+
+h5, .h5 {
+  font-size: 1.5rem;
+  line-height: 140%;
+}
+
+h6, .h6 {
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+
+p, .p {
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@each $color-name, $color-value in $all-colors {
+  .text-#{$color-name}{
+    color: var(--#{$color-name});
+  }
+}
+
+@for $i from 1 through 9 {
+  $value: $i * 100;
+  .fw-#{$value} {
+    font-weight: $value !important;
+  }
+}
+
+@for $i from 10 through 30 {
+  $value: $i;
+  $baseValue: 16;
+  $font-value: calc($value / $baseValue);
+  .fs-#{$value} {
+    font-size: #{$font-value}rem !important;
+  }
+  @media (min-width: $md-breakpoint) {
+    .fs-md-#{$value} {
+      font-size: #{$font-value}rem !important;
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .fs-lg-#{$value} {
+      font-size: #{$font-value}rem !important;
+    }
+  }
+  @media (min-width: $xl-breakpoint) {
+    .fs-xl-#{$value} {
+      font-size: #{$font-value}rem !important;
+    }
+  }
+}
+
+$text-transforms: uppercase lowercase capitalize;
+@each $text-transform in $text-transforms {
+  .text-#{$text-transform} {
+    text-transform: #{$text-transform};
+  }
+}
+
+$text-alignments: start end center;
+@each $text-alignment in $text-alignments {
+  .text-#{$text-alignment} {
+    text-align: #{$text-alignment};
+  }
+}

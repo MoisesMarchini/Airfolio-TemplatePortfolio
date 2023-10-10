@@ -1,0 +1,22 @@
+$white: #ffffff;
+$black: #000000;
+$neutral: #1C1C57;
+$primary-1: #078D84;
+$primary-2: #255BF9;
+$primary-3: #AB29A1;
+
+$all-colors: (
+  'white': $white,
+  'black': $black,
+  'neutral': $neutral,
+  'primary-1': $primary-1,
+  'primary-2': $primary-2,
+  'primary-3': $primary-3,
+);
+
+:root {
+  @each $color-name, $color-value in $all-colors {
+    --#{$color-name}: #{$color-value};
+  }
+}
+
