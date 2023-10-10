@@ -1,0 +1,14 @@
+<div style="padding-top: 80px; padding-bottom: 80px; background-color: #3e3e70">
+  <div class="container d-flex align-items-center text-white" style="gap: 4rem">
+    <p>Trusted by top companies worldwide</p>
+    <div class="d-flex align-items-center gap-8 justify-content-end">
+      <a
+        *ngFor="let company of brandLogosPath"
+        href="#"
+        class="company-logo flex-shrink-1"
+      >
+        <img [src]="company" />
+      </a>
+    </div>
+  </div>
+</div>
