@@ -1,6 +1,8 @@
 section, .section {
   --_base-padding-y: 3rem;
-  --_section-spacing-top: calc(7vmin + (var(--_base-padding-y) * .5));
+  --_section-spacing-top: 7rem;
+  --_section-bg: var(--white);
+  background-color: var(--_section-bg);
   &:not(header){
     padding-top: var(--_section-spacing-top);
     padding-bottom: var(--_section-spacing-top);
@@ -13,11 +15,6 @@ section, .section {
   .mb-section {
     margin-bottom: var(--_section-spacing-top);
   }
-}
-
-header.section{
-  min-height: 95vh;
-  min-height: 95svh;
 }
 
 .section-name {

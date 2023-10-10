@@ -46,6 +46,9 @@ $justifies: center flex-start flex-end space-between;
   }
 }
 
+.gap-80 {
+  gap: 7rem;
+}
 
 @for $i from 0 through 12 {
   $value: $i;
