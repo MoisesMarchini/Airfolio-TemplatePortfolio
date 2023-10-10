@@ -16,9 +16,23 @@
         <app-card-default
           class="shadow-md bg-white"
           style="border-radius: 1rem"
-          *ngFor="let card of cards"
+          *ngFor="let card of cards; let i = index"
           [cardContent]="card"
-        ></app-card-default>
+        >
+          <ng-container ngProjectAs="on-top">
+            <div
+              class="icon-area shadow-sm d-grid me-auto"
+              style="
+                border-radius: 1rem;
+                place-items: center;
+                width: 100px;
+                height: 100px;
+              "
+            >
+              <img [src]="'/assets/pages/home/' + cardIcons[i]" alt="" />
+            </div>
+          </ng-container>
+        </app-card-default>
       </div>
       <div class="d-flex gap-4 mx-auto" style="width: fit-content">
         <a href="#" class="btn btn-primary-1 text-white rounded btn-lg"
@@ -31,3 +45,4 @@
     </div>
   </div>
 </section>
+<app-section-divider color="#f6f8ff"></app-section-divider>

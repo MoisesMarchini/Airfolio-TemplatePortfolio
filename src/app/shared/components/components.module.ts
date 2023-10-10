@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardDefaultComponent } from './card-default/card-default.component';
+import { SectionDividerComponent } from './section-divider/section-divider.component';
 
 
 
@@ -11,7 +12,8 @@ import { CardDefaultComponent } from './card-default/card-default.component';
   
     HeaderComponent,
        FooterComponent,
-       CardDefaultComponent
+       CardDefaultComponent,
+       SectionDividerComponent
   ],
   imports: [
     CommonModule
@@ -20,7 +22,8 @@ import { CardDefaultComponent } from './card-default/card-default.component';
   
     HeaderComponent,
        FooterComponent,
-       CardDefaultComponent
+       CardDefaultComponent,
+       SectionDividerComponent
   ]
 })
 export class ComponentsModule { }

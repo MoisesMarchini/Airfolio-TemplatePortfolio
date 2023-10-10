@@ -25,4 +25,10 @@ export class ServicesSectionComponent {
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.'
     },
   ]
+  cardIcons = [
+    'uiux-design.svg',
+    'webflow-development.svg',
+    'marketing.svg',
+    'branding.svg',
+  ]
 }
