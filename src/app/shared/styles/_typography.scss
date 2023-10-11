@@ -72,6 +72,13 @@ a {
   .fw-#{$value} {
     font-weight: $value !important;
   }
+  @each $breakpoint-tag, $breakpoint-screen in $breakpoints{
+    @media (min-width: $breakpoint-screen) {
+      .fw-#{$breakpoint-tag}-#{$value} {
+        font-weight: $value !important;
+      }
+    }
+  }
 }
 
 @for $i from 10 through 30 {
@@ -81,19 +88,11 @@ a {
   .fs-#{$value} {
     font-size: #{$font-value}rem !important;
   }
-  @media (min-width: $md-breakpoint) {
-    .fs-md-#{$value} {
-      font-size: #{$font-value}rem !important;
-    }
-  }
-  @media (min-width: $lg-breakpoint) {
-    .fs-lg-#{$value} {
-      font-size: #{$font-value}rem !important;
-    }
-  }
-  @media (min-width: $xl-breakpoint) {
-    .fs-xl-#{$value} {
-      font-size: #{$font-value}rem !important;
+  @each $breakpoint-tag, $breakpoint-screen in $breakpoints{
+    @media (min-width: $breakpoint-screen) {
+      .fs-#{$breakpoint-tag}-#{$value} {
+        font-size: #{$font-value}rem !important;
+      }
     }
   }
 }
@@ -103,11 +102,25 @@ $text-transforms: uppercase lowercase capitalize;
   .text-#{$text-transform} {
     text-transform: #{$text-transform};
   }
+  @each $breakpoint-tag, $breakpoint-screen in $breakpoints{
+    @media (min-width: $breakpoint-screen) {
+      .text-#{$breakpoint-tag}-#{$text-transform} {
+        text-transform: #{$text-transform};
+      }
+    }
+  }
 }
 
 $text-alignments: start end center;
 @each $text-alignment in $text-alignments {
   .text-#{$text-alignment} {
     text-align: #{$text-alignment};
+  }
+  @each $breakpoint-tag, $breakpoint-screen in $breakpoints{
+    @media (min-width: $breakpoint-screen) {
+      .text-#{$breakpoint-tag}-#{$text-alignment} {
+        text-align: #{$text-alignment};
+      }
+    }
   }
 }

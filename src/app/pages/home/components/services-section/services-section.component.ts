@@ -7,6 +7,7 @@ import { CardDefault } from '../../../../shared/components/card-default/card-def
   styleUrls: ['./services-section.component.scss']
 })
 export class ServicesSectionComponent {
+  sectionColor = "#f6f8ff";
   cards: CardDefault[] = [
     {
       title: 'UIUX Design',

@@ -1,0 +1,13 @@
+$positions: relative absolute fixed sticky;
+@each $position in $positions {
+  .position-#{$position}{
+    position: $position;
+  }
+  @each $breakpoint-tag, $breakpoint-screen in $breakpoints{
+    @media (min-width: $breakpoint-screen) {
+      .position-#{$breakpoint-tag}-#{$position}{
+        position: $position;
+      }
+    }
+  }
+}

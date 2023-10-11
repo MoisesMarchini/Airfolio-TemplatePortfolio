@@ -1,11 +1,16 @@
 <div style="padding-top: 80px; padding-bottom: 80px; background-color: #3e3e70">
-  <div class="container d-flex align-items-center text-white" style="gap: 4rem">
+  <div
+    class="container text-center text-md-start d-flex justify-content-center justify-content-lg-space-between align-items-center text-white flex-wrap"
+    style="gap: 4rem"
+  >
     <p>Trusted by top companies worldwide</p>
-    <div class="d-flex align-items-center gap-8 justify-content-end">
+    <div
+      class="d-flex align-items-center gap-8 justify-content-center justify-content-lg-end flex-wrap"
+    >
       <a
         *ngFor="let company of brandLogosPath"
         href="#"
-        class="company-logo flex-shrink-1"
+        class="company-logo flex-1"
       >
         <img [src]="company" />
       </a>

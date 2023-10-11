@@ -1,4 +1,4 @@
-<section style="--_section-bg: #f6f8ff">
+<section [style]="'--_section-bg: ' + sectionColor">
   <div class="container d-flex flex-column gap-80">
     <div class="d-grid grid-col-1 grid-col-lg-2 gap-80">
       <div class="section-title">
@@ -45,4 +45,4 @@
     </div>
   </div>
 </section>
-<app-section-divider color="#f6f8ff"></app-section-divider>
+<app-section-divider [bgColor]="sectionColor"></app-section-divider>
